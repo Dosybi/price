@@ -7,6 +7,16 @@ body {
   display: none !important;
 }
 
+@media screen and (max-width: 420px) {
+  .container {
+    margin: 2rem !important;
+  }
+
+  .purchase__price_input-label {
+    margin-top: 1rem;
+  }
+}
+
 .container {
   margin: 2rem auto;
   max-width: 540px;
@@ -15,6 +25,7 @@ body {
 .purchase {
   margin-top: 2rem;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .purchase__name {
