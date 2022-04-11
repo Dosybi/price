@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Сколько стоят наши вещи</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="heading">
+        <h1>Калькулятор реальной цены</h1>
+        <p>
+          Она зависит от того, как часто мы пользуемся вещами, которые покупаем.
+          Посчитайте прежде чем идти в магазин.
+        </p>
+      </div>
+      <div class="purchase">
+        <div class="purchase__name">
+          <div class="purchase__name_input-label label">Покупка</div>
+          <input
+            class="purchase__name_input input"
+            type="text"
+            value="Велосипед"
+          />
+        </div>
+        <div class="purchase__price">
+          <div class="purchase__price_input-label label">Цена, $</div>
+          <input class="purchase__price_input input" type="text" value="200" />
+        </div>
+      </div>
+      <div class="settings">
+        <div class="settings__range">
+          <div class="settings__range-label label">
+            <div>Буду пользоваться, в месяцах</div>
+            <div class="range-value">1</div>
+          </div>
+          <input
+            type="range"
+            class="settings__range-slider"
+            id="settings__range"
+            value="1"
+            min="1"
+            max="240"
+          />
+        </div>
+        <div class="settings__seasons hidden">
+          <div class="settings__seasons_item">
+            <button class="settings__seasons_btn">Летом</button>
+          </div>
+          <div class="settings__seasons_item">
+            <button class="settings__seasons_btn">Осенью</button>
+          </div>
+          <div class="settings__seasons_item">
+            <button class="settings__seasons_btn">Зимой</button>
+          </div>
+          <div class="settings__seasons_item">
+            <button class="settings__seasons_btn">Весной</button>
+          </div>
+        </div>
+        <div class="settings__frequency">
+          <div class="settings__frequency-label label">
+            <div>Как часто</div>
+            <div class="frequency-value">Каждый день</div>
+          </div>
+          <input
+            type="range"
+            class="settings__frequency-slider"
+            id="settings__frequency"
+            min="1"
+            max="9"
+            value="9"
+          />
+        </div>
+        <div class="settings__sale">
+          <div class="settings__sale_check">
+            <input type="checkbox" class="settings__sale_box" />
+            <div>Потом продам</div>
+            <div class="sale-options hidden">
+              <div> за </div>
+              <div><input class="sale-price" type="text" value="20" /></div>
+              <div> % от цены </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="get-result">Посчитать</button>
+      <div class="result">
+        <h1 class="result__heading"></h1>
+        <h1 class="result__number"></h1>
+      </div>
+    </main>
+    <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>

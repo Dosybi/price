@@ -1,0 +1,129 @@
+body {
+  font-family: Raleway, sans-serif;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.container {
+  margin: 2rem auto;
+  max-width: 540px;
+}
+
+.purchase {
+  margin-top: 2rem;
+  display: flex;
+}
+
+.purchase__name {
+  margin-right: 2rem;
+}
+
+.input {
+  padding: 0 1rem;
+  border: 1px solid;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 200px;
+  height: 45px;
+}
+
+.settings {
+  margin-top: 2rem;
+}
+
+.settings__range-label,
+.settings__frequency-label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.settings__range-slider,
+.settings__frequency-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 4px;
+  background: rgb(46, 46, 229);
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.settings__range-slider::-webkit-slider-thumb,
+.settings__frequency-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border-radius: 50%;
+  background: rgb(46, 46, 229);
+  cursor: grab;
+  width: 20px;
+  height: 20px;
+}
+
+.settings__seasons {
+  margin-top: 1rem;
+  display: flex;
+}
+
+.settings__seasons_btn,
+.settings__sale_btn {
+  background: rgb(204, 214, 255);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.settings__seasons_btn-disabled {
+  background: lightgray !important;
+}
+
+.settings__frequency-label {
+  margin-top: 2rem;
+}
+
+.settings__sale_box {
+  margin-right: 0.8rem;
+  zoom: 1.3;
+}
+
+.settings__sale_check {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 2rem;
+}
+
+.settings__sale_options {
+  margin-top: 1rem;
+  display: flex;
+}
+
+.sale-options {
+  display: inline-flex;
+  align-items: flex-end;
+}
+
+.sale-price {
+  width: 30px;
+  text-align: center;
+  line-height: 0;
+  border: none;
+  background: rgb(204, 214, 255);
+  padding: 0;
+}
+
+.get-result {
+  margin-top: 2rem;
+  background: rgb(204, 214, 255);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+.result {
+  margin-top: 2rem;
+}
