@@ -81,6 +81,7 @@ body {
 .settings__seasons {
   margin-top: 1rem;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .settings__seasons_btn,
