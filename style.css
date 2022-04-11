@@ -12,6 +12,11 @@ body {
     margin: 2rem !important;
   }
 
+  h1 {
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
   .purchase__price_input-label {
     margin-top: 1rem;
   }
