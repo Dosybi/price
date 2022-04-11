@@ -85,6 +85,6 @@ buttonResult.addEventListener('click', function (e) {
     : (salePrice = 1)
   resultHeading.textContent = `${purchaseName.value}:`
   let times = months * frequency * seasons
-  final = (price * salePrice) / timess
+  final = (price * salePrice) / times
   resultNumber.textContent = `${final.toFixed(2)} $ за раз`
 })
