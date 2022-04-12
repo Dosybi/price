@@ -3,6 +3,11 @@ body {
   font-size: 16px;
 }
 
+h1 {
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
 .hidden {
   display: none !important;
 }
@@ -10,11 +15,6 @@ body {
 @media screen and (max-width: 420px) {
   .container {
     margin: 2rem !important;
-  }
-
-  h1 {
-    line-height: 1;
-    margin-bottom: 0.5rem;
   }
 
   .purchase__price_input-label {
@@ -61,7 +61,7 @@ body {
   width: 100%;
   -webkit-appearance: none;
   height: 4px;
-  background: rgb(46, 46, 229);
+  background: #00e600;
   outline: none;
   opacity: 0.7;
   -webkit-transition: 0.2s;
@@ -72,10 +72,20 @@ body {
 .settings__frequency-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   border-radius: 50%;
-  background: rgb(46, 46, 229);
+  background: #009900;
   cursor: grab;
   width: 20px;
   height: 20px;
+}
+
+.settings__range-slider::-webkit-slider-thumb:hover,
+.settings__frequency-slider::-webkit-slider-thumb:hover {
+  -webkit-appearance: none;
+  border-radius: 50%;
+  background: #009900;
+  cursor: grab;
+  width: 25px;
+  height: 25px;
 }
 
 .settings__seasons {
@@ -86,8 +96,8 @@ body {
 
 .settings__seasons_btn,
 .settings__sale_btn {
-  background: rgb(204, 214, 255);
-  border: none;
+  background: #e6ffe6;
+  border: 1px solid #00e600;
   border-radius: 4px;
   cursor: pointer;
   padding: 0.5rem 1rem;
@@ -95,6 +105,7 @@ body {
 
 .settings__seasons_btn-disabled {
   background: lightgray !important;
+  border: 1px solid lightgray;
 }
 
 .settings__frequency-label {
@@ -127,13 +138,14 @@ body {
   text-align: center;
   line-height: 0;
   border: none;
-  background: rgb(204, 214, 255);
+  background: #e6ffe6;
   padding: 0;
 }
 
 .get-result {
   margin-top: 2rem;
-  background: rgb(204, 214, 255);
+  background: #009900;
+  color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -143,4 +155,10 @@ body {
 
 .result {
   margin-top: 2rem;
+  background: #f2f2f2;
+  padding: 1.5rem 1rem 2rem 1rem;
+}
+
+.result__desc {
+  margin-top: 1rem;
 }

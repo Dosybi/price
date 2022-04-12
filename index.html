@@ -34,11 +34,18 @@
             class="purchase__name_input input"
             type="text"
             value="Велосипед"
+            onfocus="this.value=''"
           />
         </div>
         <div class="purchase__price">
           <div class="purchase__price_input-label label">Цена, $</div>
-          <input class="purchase__price_input input" type="text" value="200" />
+          <input
+            class="purchase__price_input input"
+            type="number"
+            value="200"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+            onfocus="this.value=''"
+          />
         </div>
       </div>
       <div class="settings">
@@ -97,9 +104,10 @@
         </div>
       </div>
       <button class="get-result">Посчитать</button>
-      <div class="result">
+      <div class="result hidden">
         <h1 class="result__heading"></h1>
         <h1 class="result__number"></h1>
+        <p class="result__desc"></p>
       </div>
     </main>
     <script type="text/javascript" src="./index.js"></script>

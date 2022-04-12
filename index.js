@@ -12,6 +12,8 @@ const purchaseName = document.querySelector('.purchase__name_input')
 const purchasePrice = document.querySelector('.purchase__price_input')
 const resultHeading = document.querySelector('.result__heading')
 const resultNumber = document.querySelector('.result__number')
+const resultDesc = document.querySelector('.result__desc')
+const resultSection = document.querySelector('.result')
 const buttonResult = document.querySelector('.get-result')
 
 let price = 200
@@ -40,7 +42,6 @@ settingsSeason.addEventListener('click', (e) => {
   if (e.target.classList.contains('settings__seasons_btn-disabled')) {
     seasons -= 0.25
   } else seasons += 0.25
-  console.log(seasons)
 })
 
 frequencySlider.addEventListener('input', () => {
@@ -83,8 +84,25 @@ buttonResult.addEventListener('click', function (e) {
   buttonSale.checked
     ? (salePrice = 1 - salePersent.value / 100)
     : (salePrice = 1)
+  resultSection.classList.remove('hidden')
   resultHeading.textContent = `${purchaseName.value}:`
   let times = months * frequency * seasons
+  let last = Math.floor(times).toString().slice(-1)
+  let last2 = Math.floor(times).toString().slice(-2)
   final = (price * salePrice) / times
   resultNumber.textContent = `${final.toFixed(2)} $ за раз`
+  resultDesc.textContent = `Настоящая цена покупки, если воспользоваться ею ${Math.floor(
+    times
+  )} ${
+    last == 0 ||
+    last == 1 ||
+    last == 5 ||
+    last == 6 ||
+    last == 7 ||
+    last == 8 ||
+    last == 9 ||
+    (last2 > 10 && last2 < 21)
+      ? 'раз'
+      : 'раза'
+  }`
 })
