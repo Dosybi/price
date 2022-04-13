@@ -76,6 +76,7 @@ h1 {
   cursor: grab;
   width: 20px;
   height: 20px;
+  transition: 0.3s;
 }
 
 .settings__range-slider::-webkit-slider-thumb:hover,
@@ -106,6 +107,7 @@ h1 {
 .settings__seasons_btn-disabled {
   background: lightgray !important;
   border: 1px solid lightgray;
+  text-decoration: line-through;
 }
 
 .settings__frequency-label {
@@ -155,7 +157,7 @@ h1 {
 
 .result {
   margin-top: 2rem;
-  background: #f2f2f2;
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
   padding: 1.5rem 1rem 2rem 1rem;
   border-radius: 10px;
 }

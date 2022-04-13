@@ -28,11 +28,25 @@ purchasePrice.addEventListener('change', (e) => {
 })
 
 rangeSlider.addEventListener('input', () => {
-  rangeValue.textContent = rangeSlider.value
-  rangeSlider.value >= 12
+  let rangeVal = rangeSlider.value
+  rangeVal >= 12
     ? settingsSeason.classList.remove('hidden')
     : settingsSeason.classList.add('hidden')
   months = rangeSlider.value
+  rangeVal >= 12 ? (rangeSlider.step = 12) : (rangeSlider.step = 1)
+  if (rangeVal == 1) {
+    rangeValue.textContent = `${rangeVal} месяц`
+  } else if (rangeVal > 1 && rangeVal < 5) {
+    rangeValue.textContent = `${rangeVal} месяца`
+  } else if (rangeVal > 4 && rangeVal < 12) {
+    rangeValue.textContent = `${rangeVal} месяцев`
+  } else if (rangeVal == 12) {
+    rangeValue.textContent = `${rangeVal / 12} год`
+  } else if (rangeVal >= 24 && rangeVal < 49) {
+    rangeValue.textContent = `${rangeVal / 12} года`
+  } else if (rangeVal > 49) {
+    rangeValue.textContent = `${rangeVal / 12} лет`
+  }
 })
 
 settingsSeason.addEventListener('click', (e) => {

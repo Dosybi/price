@@ -52,14 +52,14 @@
         <div class="settings__range">
           <div class="settings__range-label label">
             <div>Буду пользоваться, в месяцах</div>
-            <div class="range-value">1</div>
+            <div class="range-value">1 месяц</div>
           </div>
           <input
             type="range"
             class="settings__range-slider"
             id="settings__range"
             value="1"
-            min="1"
+            min="0"
             max="240"
           />
         </div>
@@ -97,7 +97,14 @@
             <div>Потом продам</div>
             <div class="sale-options hidden">
               <div> за </div>
-              <div><input class="sale-price" type="text" value="20" /></div>
+              <div>
+                <input
+                  class="sale-price"
+                  type="text"
+                  value="20"
+                  onfocus="this.value=''"
+                />
+              </div>
               <div> % от цены </div>
             </div>
           </div>
